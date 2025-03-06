@@ -12,8 +12,8 @@ using WebApplication3.Data;
 namespace WebApplication3.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250306092458_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20250306114231_Initial")]
+    partial class Initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -120,11 +120,11 @@ namespace WebApplication3.Migrations
 
             modelBuilder.Entity("WebApplication3.Models.Customer", b =>
                 {
-                    b.HasOne("WebApplication3.Models.MembershipType", "MembreshipType")
+                    b.HasOne("WebApplication3.Models.MembershipType", "MembershipType")
                         .WithMany("Customers")
                         .HasForeignKey("MembershiptypeID");
 
-                    b.Navigation("MembreshipType");
+                    b.Navigation("MembershipType");
                 });
 
             modelBuilder.Entity("WebApplication3.Models.Movie", b =>

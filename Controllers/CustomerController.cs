@@ -70,7 +70,7 @@ namespace WebApplication3.Controllers
         // Liste des clients
         public IActionResult Index()
         {
-            var customers = _context.Customers.Include(c => c.MembreshipType).ToList();
+            var customers = _context.Customers.Include(c => c.MembershipType).ToList();
             return View(customers);
         }
     }

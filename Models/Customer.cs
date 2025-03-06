@@ -11,12 +11,10 @@ namespace WebApplication3.Models
         public string Name { get; set; }
 
         // Relation plusieurs-à-un avec MembershipType
-        [ForeignKey("Type d'adhésion")]
+        [ForeignKey("MembershipType")]
         public int? MembershiptypeID { get; set; }
-        public MembershipType? MembreshipType{ get ; set ; }
+        public MembershipType? MembershipType{ get ; set ; }
 
-    // Relation Plusieurs-à-Plusieurs avec Films
-     public ICollection<Movie> Movies { get; set; } = new List<Movie>();
-        public MembershipType? MembershipType { get; internal set; }
+       public ICollection<Movie> Movies { get; set; } = new List<Movie>();
     }
 }

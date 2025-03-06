@@ -117,11 +117,11 @@ namespace WebApplication3.Migrations
 
             modelBuilder.Entity("WebApplication3.Models.Customer", b =>
                 {
-                    b.HasOne("WebApplication3.Models.MembershipType", "MembreshipType")
+                    b.HasOne("WebApplication3.Models.MembershipType", "MembershipType")
                         .WithMany("Customers")
                         .HasForeignKey("MembershiptypeID");
 
-                    b.Navigation("MembreshipType");
+                    b.Navigation("MembershipType");
                 });
 
             modelBuilder.Entity("WebApplication3.Models.Movie", b =>
